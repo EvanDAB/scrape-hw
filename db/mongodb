@@ -1,0 +1,31 @@
+use gamespot;
+
+db.createCollection('comments');
+db.createCollection('articles');
+
+show collections;
+show articles;
+db.articles.insert([
+    {
+        "headline": "this",
+        "summary" : 'summary',
+        "url" : url,
+        "image": image,
+        "timestap": Use the logic that was used in that link
+    }
+])
+
+db.comments.insert([
+    {
+        "article_name": "This Article",
+        "comment": 'this article is so good  i wrote a comment',
+        "c_name": 'Slim Shady'
+    },
+    {
+        "article_name": "That Article",
+        "comment": 'this article is so bad i wrote a comment',
+        "c_name": '50 Cent'
+    }
+])
+
+db.comments.removeOne({article_id {$gt: 'That Article'}, true});
